@@ -1,0 +1,28 @@
+<nav class=" navbar-fixed-top navbar-toggleable-sm navbar-inverse bg-primary mb-3
+<button class=navbar-toggler navbar-right" type="button"
+dta-toggle="collapse" dat-target="#collapsingNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="navbar-collapse collapse" id="collapsingNavbar">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <h2><a class="nav-link" href="dashboard.php">ONLINE LIBRARY MANAGEMENT SYSTEM
+                <span class="sr-only">OLMS</span></a></h2>
+</li>
+</ul>
+<ul class="navbar-nav ml-auto">
+    <?php if(!empty($_SESSION) && $_SESSION["userID"]) { ?>
+    <li class="nav-item">
+        <a class="nav-link"><?php echo ucfirst($_SESSION["name"]); ?> |</a>
+    </li>
+<li class="nav-item">
+    <a class="nav-link" href="logout.php">Logout</a>
+    </li>
+<?php } else { ?>
+  <li class="nav-item">
+    <a class="nav-link" href="index.php">Login</a>
+</li>
+<?php } ?>
+</ul>
+</div>
+</nav>
